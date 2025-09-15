@@ -1,5 +1,5 @@
 # draft_maker
-Tools ton automatically generate football drafts
+Tools to automatically generate football drafts
 
 ## Installation
 
