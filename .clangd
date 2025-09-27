@@ -1,0 +1,13 @@
+CompileFlags:
+  CompilationDatabase: "."
+  Add: 
+    - -Wno-unused-variable
+    - -Wno-infinite-recursion
+    - -Wno-array-bounds
+
+Diagnostics:
+  Suppress: 'pp_including_mainfile_in_preamble'
+
+Index:
+  Background: Build
+  StandardLibrary: Yes

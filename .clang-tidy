@@ -1,0 +1,61 @@
+Checks: >
+  clang-analyzer-*,
+  bugprone-*,
+  performance-*,
+  readability-*,
+  modernize-*,
+  cppcoreguidelines-*,
+  misc-*,
+  google-*,
+  cert-*,
+  hicpp-*,
+  portability-*,
+  concurrency-*,
+  -clang-analyzer-cplusplus.NewDeleteLeaks,
+  -cppcoreguidelines-owning-memory,
+  -cppcoreguidelines-pro-type-reinterpret-cast,
+  -readability-magic-numbers,
+  -modernize-use-trailing-return-type
+
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'
+FormatStyle: file
+CheckOptions:
+  - key:             readability-identifier-naming.ClassCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.FunctionCase
+    value:           camelBack
+  - key:             readability-identifier-naming.VariableCase
+    value:           camelBack
+  - key:             readability-identifier-naming.PrivateMemberPrefix
+    value:           m_
+  - key:             readability-identifier-naming.PrivateMemberCase
+    value:           camelBack
+  - key:             readability-identifier-naming.ParameterCase
+    value:           camelBack
+  - key:             readability-identifier-naming.ConstexprVariableCase
+    value:           UPPER_CASE
+  - key:             readability-identifier-naming.EnumCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.EnumConstantCase
+    value:           UPPER_CASE
+  - key:             readability-identifier-naming.NamespaceCase
+    value:           camelBack
+  - key:             readability-function-cognitive-complexity.Threshold
+    value:           25
+  - key:             modernize-use-nullptr.NullMacros
+    value:           'NULL'
+  - key:             cppcoreguidelines-avoid-magic-numbers.IgnoreEnums
+    value:           '1'
+  - key:             cppcoreguidelines-avoid-magic-numbers.IgnoreArrayIndexes
+    value:           '1'
+  - key:             bugprone-argument-comment.StrictMode
+    value:           '1'
+  - key:             bugprone-easily-swappable-parameters.MinimumLength
+    value:           '2'
+  - key:             performance-faster-string-find.StringLikeClasses
+    value:           'std::basic_string'
+  - key:             readability-function-size.LineThreshold
+    value:           '50'
+  - key:             readability-function-size.ParameterThreshold
+    value:           '5'
