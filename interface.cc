@@ -1,6 +1,5 @@
 #include <filesystem>
 #include <iostream>
-#include <print>
 #include <string>
 #include <vector>
 
@@ -10,7 +9,7 @@ namespace {
 
 void printHeader()
 {
-  std::println("=== Draft Maker C++ ===");
+  std::cout << "=== Draft Maker C++ ===\n";
   std::cout << "=======================================\n";
 }
 

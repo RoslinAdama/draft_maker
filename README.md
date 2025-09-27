@@ -5,9 +5,11 @@ La version cpp passe de ~1300 iter/s à 50000 KAPPACHUNGUS PYTHON DELUXE O(n²) 
 
 ## Installation
 
-### Cmake 4.1 minimum
+### Cmake & Clang
 
-### Clang 20 minimum (pour compiler en c++26)
+```bash
+sudo apt install clang cmake
+```
 
 ## Données
 

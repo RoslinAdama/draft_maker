@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.1)
+cmake_minimum_required(VERSION 3.10)
 
 project(draftMaker LANGUAGES CXX)
 
@@ -10,7 +10,7 @@ endif()
 
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
-set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 file(GLOB SRC_FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc")
@@ -26,13 +26,13 @@ target_compile_options(draftMaker PRIVATE
 )
 
 include(CheckCXXCompilerFlag)
-check_cxx_compiler_flag("-std=c++26" COMPILER_SUPPORTS_CXX26)
+check_cxx_compiler_flag("-std=c++20" COMPILER_SUPPORTS_CXX20)
 
-if(COMPILER_SUPPORTS_CXX26)
+if(COMPILER_SUPPORTS_CXX20)
   target_compile_definitions(draftMaker PRIVATE COMPILEDWITHC23)
-  message(STATUS "Using C++26")
+  message(STATUS "Using C++20")
 else()
-  message(FATAL_ERROR "Your compiler does not support C++26")
+  message(FATAL_ERROR "Your compiler does not support C++20")
 endif()
 
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
